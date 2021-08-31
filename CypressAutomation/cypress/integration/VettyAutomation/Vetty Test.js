@@ -7,7 +7,7 @@ describe('MyTestSuite', () => {
       cy.wait(10000)
       //cy.get("#middleNameCheck").click()
       cy.get("#middlename").clear().type("Kumar")
-      cy.get('[placeholder="mm/dd/yyyy"]').clear().type("10171910{enter}")
+      cy.get('[placeholder="mm/dd/yyyy"]').clear().type("10171903{enter}")
      
       //cy.get('[placeholder="mm/dd/yyyy"]').click()
       cy.wait(5000)
@@ -41,6 +41,8 @@ describe('MyTestSuite', () => {
       cy.wait(10000)
       cy.get('[formcontrolname="licenseState"]').select("2: Alaska")
       cy.get('[formcontrolname="licenseNumber"]').clear().type("123456")
+      cy.get('[type="file"]').attachFile("images.jpg")
+      cy.wait(10000)
       cy.get(".educontinue").click()
       cy.get('.Yes-this-is-correct').click()
       //cy.get(".educontinue").click()
@@ -124,7 +126,13 @@ describe('MyTestSuite', () => {
       cy.get('[value="manager"]').click({force: true})
       cy.get(".btnDefault").click()
       cy.wait(10000)
-
-
+      cy.get(".btnDefault").click()
+      cy.wait(10000)
+      cy.get(".btnDefault").click()
+      cy.wait(10000)
+      cy.get(".btnDefault").click()
+      cy.wait(10000)
+      cy.get('canvas').click(10,10)
+      cy.wait(10000)
     })
   })
